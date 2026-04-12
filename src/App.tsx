@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Application, DisplacementFilter, Sprite, Texture } from 'pixi.js'
+import ServicesPage from './pages/ServicesPage'
 import Navbar from './components/Navbar'
 import './index.css'
 
@@ -277,6 +278,8 @@ function App() {
             />
           </div>
         </header>
+
+        <ServicesPage />
 
         <section id="expertise" className="expertise-section">
           <div className="content-grid">
