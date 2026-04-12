@@ -24,7 +24,7 @@ const contactMethods = [
   {
     title: 'Calendar',
     description: 'Book an automation audit',
-    href: 'https://calendly.com/',
+    href: 'https://calendly.com/rixwan44mts',
     Icon: CalendarDays,
   },
   {
@@ -52,8 +52,14 @@ function ContactPage() {
   })
 
   const onSubmit = (values: ContactFormValues) => {
+    const subject = encodeURIComponent(`New inquiry from ${values.name} (${values.businessType})`)
+    const body = encodeURIComponent(
+      `Name: ${values.name}\nEmail: ${values.email}\nBusiness type: ${values.businessType}\n\nMessage:\n${values.message}`,
+    )
+
+    window.open(`mailto:rixwan44mts@gmail.com?subject=${subject}&body=${body}`, '_self')
     console.log('Contact form submitted:', values)
-    toast.success('Thanks! Your message has been sent.')
+    toast.success('Thanks! Your email draft is ready to send.')
     reset()
   }
 
