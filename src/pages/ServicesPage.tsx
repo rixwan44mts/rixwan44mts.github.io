@@ -1,4 +1,5 @@
 import type { MouseEvent } from 'react'
+import { useRef } from 'react'
 import { animate, motion, useMotionValue, useReducedMotion } from 'framer-motion'
 import { Bot, Database, Layers, Mail, TrendingUp, Zap, type LucideIcon } from 'lucide-react'
 
@@ -41,24 +42,33 @@ const services: Service[] = [
   },
 ]
 
+const TILT_LIMIT = 6
+
 function ServiceCard({ service }: { service: Service }) {
   const rotateX = useMotionValue(0)
   const rotateY = useMotionValue(0)
   const reduceMotion = useReducedMotion()
+  const cardRectRef = useRef<DOMRect | null>(null)
+
+  const onMouseEnter = (event: MouseEvent<HTMLElement>) => {
+    if (reduceMotion) return
+    cardRectRef.current = event.currentTarget.getBoundingClientRect()
+  }
 
   const onMouseMove = (event: MouseEvent<HTMLElement>) => {
     if (reduceMotion) return
 
-    const rect = event.currentTarget.getBoundingClientRect()
+    const rect = cardRectRef.current ?? event.currentTarget.getBoundingClientRect()
     const x = (event.clientX - (rect.left + rect.width / 2)) / (rect.width / 2)
     const y = (event.clientY - (rect.top + rect.height / 2)) / (rect.height / 2)
-    const TILT_LIMIT = 6
 
     rotateX.set(-y * TILT_LIMIT)
     rotateY.set(x * TILT_LIMIT)
   }
 
   const onMouseLeave = () => {
+    cardRectRef.current = null
+
     if (reduceMotion) return
 
     animate(rotateX, 0, { duration: 0.4, ease: 'easeOut' })
@@ -73,6 +83,7 @@ function ServiceCard({ service }: { service: Service }) {
       style={reduceMotion ? undefined : { rotateX, rotateY, transformPerspective: 600 }}
       whileHover={reduceMotion ? undefined : { y: -4 }}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+      onMouseEnter={onMouseEnter}
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
     >
