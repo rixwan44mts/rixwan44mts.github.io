@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './HeroSection.css'
 
 const brandLogoUrl = 'https://github.com/user-attachments/assets/801f6f28-6426-4526-892d-08f60b3639d9'
@@ -22,12 +23,12 @@ function HeroSection() {
           lead strategically instead of firefighting operations every day.
         </p>
         <div className="cta-row">
-          <a href="/contact" className="cta-primary">
+          <Link to="/contact" className="cta-primary">
             Book Automation Audit
-          </a>
-          <a href="/services" className="cta-secondary">
+          </Link>
+          <Link to="/services" className="cta-secondary">
             View Services
-          </a>
+          </Link>
         </div>
         <div className="social-row" role="group" aria-label="Social links">
           <a href={socialLinks.whatsapp} className="social-link" target="_blank" rel="noopener noreferrer">
