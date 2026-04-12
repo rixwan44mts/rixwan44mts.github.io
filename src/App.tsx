@@ -196,7 +196,9 @@ function LiquidBackground() {
 function App() {
   const socialLinks = {
     whatsapp: 'https://wa.me/923285093973?text=Hi%20Rixwan%2C%20I%20want%20an%20automation%20audit.',
-    linkedin: 'https://www.linkedin.com/in/rixwan44mts/',
+    linkedin:
+      'https://www.linkedin.com/in/muhammad-rizwan-aslam-43a2b5259?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    fiverr: 'https://www.fiverr.com/s/38rlVkV',
   }
 
   return (
@@ -230,11 +232,27 @@ function App() {
               </a>
               <a
                 href={socialLinks.linkedin}
-                className="social-link"
+                className="social-link social-link-icon"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Open LinkedIn profile in a new tab"
+                title="LinkedIn"
               >
-                LinkedIn
+                <span className="social-icon social-icon-linkedin" aria-hidden="true">
+                  in
+                </span>
+              </a>
+              <a
+                href={socialLinks.fiverr}
+                className="social-link social-link-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Fiverr profile in a new tab"
+                title="Fiverr"
+              >
+                <span className="social-icon social-icon-fiverr" aria-hidden="true">
+                  fi
+                </span>
               </a>
             </div>
           </div>
