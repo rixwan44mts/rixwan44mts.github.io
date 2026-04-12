@@ -47,7 +47,41 @@ a {
 .page-shell {
   width: min(1120px, 92vw);
   margin: 0 auto;
-  padding: 5rem 0 4.5rem;
+  padding: 2rem 0 4.5rem;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.site-nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.5rem 0.95rem;
+  color: #dcedff;
+  border: 1px solid rgba(154, 196, 238, 0.45);
+  background: rgba(16, 31, 54, 0.62);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.site-nav-link.active {
+  border-color: rgba(140, 202, 255, 0.9);
+  background: rgba(28, 53, 90, 0.85);
+}
+
+.page-panel {
+  position: relative;
+}
+
+.section-stack {
+  display: grid;
+  gap: 1rem;
 }
 
 .hero-section {
@@ -235,6 +269,13 @@ h1 {
   gap: 0.8rem;
 }
 
+.services-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
 .skills-section {
   margin-top: 0.25rem;
 }
@@ -337,6 +378,37 @@ h1 {
   max-width: 58ch;
 }
 
+.contact-form {
+  display: grid;
+  gap: 0.85rem;
+  background: linear-gradient(145deg, rgba(17, 35, 60, 0.72), rgba(8, 18, 34, 0.68));
+  border: 1px solid rgba(154, 195, 239, 0.3);
+  border-radius: 20px;
+  padding: 1.2rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.4rem;
+  color: #dcedff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-field input,
+.form-field textarea {
+  border-radius: 10px;
+  border: 1px solid rgba(154, 196, 238, 0.45);
+  background: rgba(16, 31, 54, 0.62);
+  color: #eef5ff;
+  padding: 0.7rem 0.8rem;
+  font: inherit;
+}
+
+.form-submit {
+  justify-self: start;
+}
+
 @media (max-width: 920px) {
   .page-shell {
     padding-top: 3rem;
@@ -348,6 +420,10 @@ h1 {
   }
 
   .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .services-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -364,6 +440,10 @@ h1 {
 
 @media (max-width: 560px) {
   .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
     grid-template-columns: 1fr;
   }
 }
