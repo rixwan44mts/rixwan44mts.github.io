@@ -7,7 +7,7 @@ import { z } from 'zod'
 
 const contactFormSchema = z.object({
   name: z.string().min(2, 'Name is required'),
-  email: z.email('Enter a valid email address'),
+  email: z.string().email('Enter a valid email address'),
   businessType: z.string().min(1, 'Please select a business type'),
   message: z.string().min(10, 'Message must be at least 10 characters'),
 })
@@ -51,7 +51,7 @@ function ContactPage() {
     },
   })
 
-  const onSubmit = async (values: ContactFormValues) => {
+  const onSubmit = (values: ContactFormValues) => {
     console.log('Contact form submitted:', values)
     toast.success('Thanks! Your message has been sent.')
     reset()
