@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Application, DisplacementFilter, Sprite, Texture } from 'pixi.js'
+import ContactPage from './pages/ContactPage'
 import './index.css'
 
 function createGradientTexture(): Texture {
@@ -347,16 +348,7 @@ function App() {
           />
         </section>
 
-        <section id="contact" className="final-cta">
-          <h2>Ready to Stop Being the Bottleneck?</h2>
-          <p>
-            Let’s map your current process, eliminate friction, and install a system that scales without adding
-            chaos.
-          </p>
-          <a href="mailto:rixwan44mts@gmail.com" className="cta-primary">
-            Start the Conversation
-          </a>
-        </section>
+        <ContactPage />
       </main>
     </>
   )
