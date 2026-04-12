@@ -4,7 +4,7 @@ const bottomProfileImageUrl =
 export function AboutPage() {
   return (
     <section className="page-panel section-stack">
-      <p className="kicker">Rizwan's Story</p>
+      <p className="kicker">Rixwan's Story</p>
       <h1>About</h1>
 
       <article className="about-card">
