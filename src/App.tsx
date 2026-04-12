@@ -203,8 +203,8 @@ function App() {
             <p className="kicker">Automation Studio for Growth-Focused Operators</p>
             <h1>Your Business Should Run Without You In It.</h1>
             <p className="hero-lead">
-              I design lean systems that close leads, automate follow-up, and keep your pipeline clean so
-              you can manage strategically instead of firefighting every day.
+              I design lean systems that close leads, automate follow-up, and keep your pipeline clean, so
+              you can lead strategically instead of firefighting operations every day.
             </p>
             <div className="cta-row">
               <a href="#contact" className="cta-primary">
@@ -225,34 +225,58 @@ function App() {
           </div>
         </header>
 
-        <section id="expertise" className="content-grid">
-          <article className="info-card">
-            <h2>GoHighLevel Mastery</h2>
-            <p>
-              I build production-grade GoHighLevel ecosystems with conversion-first <strong>Snapshots</strong>,
-              monetizable <strong>SaaS Mode</strong> setups, and <strong>Advanced Workflows</strong> that run
-              lead capture, nurturing, appointment booking, and retention with minimal manual effort.
-            </p>
-          </article>
+        <section id="expertise" className="expertise-section">
+          <div className="content-grid">
+            <article className="info-card">
+              <h2>GoHighLevel Mastery</h2>
+              <p>
+                I build production-grade GoHighLevel ecosystems that align funnel design, CRM architecture,
+                and sales execution so teams can scale with speed and consistency.
+              </p>
+            </article>
 
-          <article className="info-card">
-            <h2>Business Automation</h2>
-            <p>
-              From top-of-funnel targeting to pipeline closeout, I engineer high-performing lead funnels and
-              CRM structures that reduce leakage, tighten response time, and give management clean,
-              actionable visibility across sales operations.
-            </p>
-          </article>
+            <article className="info-card">
+              <h2>Business Automation</h2>
+              <p>
+                From lead capture to closeout, I engineer workflows that reduce leakage, shorten response
+                time, and provide clean visibility across pipeline operations.
+              </p>
+            </article>
+          </div>
+
+          <div className="skills-section" role="region" aria-labelledby="gohighlevel-capabilities-heading">
+            <h2 id="gohighlevel-capabilities-heading" className="skills-heading">
+              GoHighLevel Capabilities
+            </h2>
+            <div className="skills-grid">
+              <article className="skill-card">
+                <h3>Snapshots</h3>
+                <p>Conversion-ready templates for fast deployment across client accounts.</p>
+              </article>
+              <article className="skill-card">
+                <h3>SaaS Mode</h3>
+                <p>Monetizable white-label setup with packaging, billing logic, and onboarding flow.</p>
+              </article>
+              <article className="skill-card">
+                <h3>Advanced Workflows</h3>
+                <p>Multi-step automations for nurturing, reminders, reactivation, and follow-up.</p>
+              </article>
+              <article className="skill-card">
+                <h3>CRM Pipeline Systems</h3>
+                <p>Structured stages, triggers, and reporting for predictable sales management.</p>
+              </article>
+            </div>
+          </div>
         </section>
 
         <section className="about-card">
           <h2>About Me</h2>
           <p>
-            I’m Rixwan, a Mechatronics Engineering graduate from <strong>NUST</strong> with a management-first
-            mindset and street-smart execution style. I focus on building systems that remove owner
-            dependency, increase team accountability, and turn operations into predictable outcomes. My life
-            goal is to build a technical school for needy children in my village so practical skills can create
-            real economic freedom.
+            I’m Rixwan, a <strong>NUST Mechatronics Engineering</strong> graduate with a management-first
+            mindset and practical execution style. I focus on building systems that reduce owner dependency,
+            improve team accountability, and turn operations into predictable outcomes. My long-term goal is
+            to build a technical school for needy children in my village so practical skills can create real
+            economic freedom.
           </p>
         </section>
 

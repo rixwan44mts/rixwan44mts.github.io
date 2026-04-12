@@ -143,6 +143,46 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.expertise-section {
+  margin-bottom: 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.skills-section {
+  margin-top: 0.25rem;
+}
+
+.skills-heading {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.2rem, 1.6vw, 1.45rem);
+  color: #eef8ff;
+}
+
+.skill-card {
+  background: rgba(7, 16, 30, 0.67);
+  border: 1px solid rgba(117, 154, 196, 0.28);
+  border-radius: 18px;
+  padding: 1rem 1rem 0.95rem;
+  box-shadow: 0 10px 26px rgba(4, 10, 20, 0.36);
+}
+
+.skill-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #eaf5ff;
+}
+
+.skill-card p {
+  margin: 0.45rem 0 0;
+  color: #b7cbe1;
+  font-size: 0.95rem;
+}
+
 .info-card,
 .about-card,
 .final-cta {
@@ -191,6 +231,10 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .hero-image-wrap {
     justify-self: center;
     width: min(350px, 85vw);
@@ -199,5 +243,11 @@ h1 {
 
   h1 {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 }
