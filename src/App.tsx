@@ -13,9 +13,9 @@ function createGradientTexture(): Texture {
   }
 
   const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height)
-  gradient.addColorStop(0, '#060912')
-  gradient.addColorStop(0.45, '#0b1730')
-  gradient.addColorStop(1, '#09101f')
+  gradient.addColorStop(0, '#080808')
+  gradient.addColorStop(0.45, '#0d0d0d')
+  gradient.addColorStop(1, '#111111')
   ctx.fillStyle = gradient
   ctx.fillRect(0, 0, canvas.width, canvas.height)
 
@@ -24,8 +24,8 @@ function createGradientTexture(): Texture {
     const y = Math.random() * canvas.height
     const radius = 80 + Math.random() * 240
     const orb = ctx.createRadialGradient(x, y, 0, x, y, radius)
-    orb.addColorStop(0, 'rgba(56, 189, 248, 0.14)')
-    orb.addColorStop(1, 'rgba(56, 189, 248, 0)')
+    orb.addColorStop(0, 'rgba(212, 255, 107, 0.1)')
+    orb.addColorStop(1, 'rgba(212, 255, 107, 0)')
     ctx.fillStyle = orb
     ctx.beginPath()
     ctx.arc(x, y, radius, 0, Math.PI * 2)
@@ -46,10 +46,10 @@ function createRippleTexture(): Texture {
   }
 
   const gradient = ctx.createRadialGradient(128, 128, 10, 128, 128, 128)
-  gradient.addColorStop(0, 'rgba(255,255,255,0.95)')
-  gradient.addColorStop(0.28, 'rgba(130,198,255,0.7)')
-  gradient.addColorStop(0.65, 'rgba(130,198,255,0.2)')
-  gradient.addColorStop(1, 'rgba(130,198,255,0)')
+  gradient.addColorStop(0, 'rgba(212, 255, 107, 0.9)')
+  gradient.addColorStop(0.28, 'rgba(107, 255, 212, 0.55)')
+  gradient.addColorStop(0.65, 'rgba(167, 139, 250, 0.2)')
+  gradient.addColorStop(1, 'rgba(212, 255, 107, 0)')
 
   ctx.fillStyle = gradient
   ctx.beginPath()
@@ -74,7 +74,7 @@ function LiquidBackground() {
         resizeTo: window,
         antialias: true,
         backgroundAlpha: 1,
-        backgroundColor: 0x05080f,
+        backgroundColor: 0x080808,
       })
 
       if (isUnmounted || !containerRef.current) {
@@ -194,12 +194,12 @@ function LiquidBackground() {
 }
 
 function App() {
-  const brandLogoUrl = 'https://github.com/user-attachments/assets/801f6f28-6426-4526-892d-08f60b3639d9'
+  const brandLogoUrl = '/favicon.png'
   const topProfileImageUrl = 'https://github.com/user-attachments/assets/c97b9d2f-2567-44a3-a07a-5094a3ea6eaf'
   const bottomProfileImageUrl = 'https://github.com/user-attachments/assets/87fcaced-f262-402f-acf5-6c51c339caac'
   const socialLinks = {
-    whatsapp: 'https://wa.me/923285093973?text=Hi%20Rixwan%2C%20I%20want%20an%20automation%20audit.',
-    linkedin: 'https://www.linkedin.com/in/muhammad-rizwan-aslam-43a2b5259',
+    whatsapp: 'https://wa.me/923285093973?text=Hi%20Rizwan%2C%20I%20want%20to%20build%20Precision%20Flow%20automation.',
+    linkedin: 'https://www.linkedin.com/in/rizwan-aslam',
     fiverr: 'https://www.fiverr.com/s/38rlVkV',
   }
 
@@ -209,21 +209,38 @@ function App() {
       <main className="page-shell">
         <header className="hero-section">
           <div className="hero-copy">
-            <div className="brand-mark">
-              <img className="brand-logo" src={brandLogoUrl} alt="RW brand logo" />
-            </div>
-            <p className="kicker">Automation Studio for Growth-Focused Operators</p>
+              <div className="brand-mark">
+              <img
+                className="brand-logo"
+                src={brandLogoUrl}
+                alt="Precision Flow monogram logo"
+                onError={(event) => {
+                  event.currentTarget.src = '/favicon.svg'
+                }}
+              />
+              </div>
+            <p className="kicker">Precision Flow</p>
             <h1>Your Business Should Run Without You In It.</h1>
             <p className="hero-lead">
-              I design lean systems that close leads, automate follow-up, and keep your pipeline clean, so
-              you can lead strategically instead of firefighting operations every day.
+              Dark, premium automation systems engineered for operators who want execution without chaos.
             </p>
+            <div className="brand-meta" aria-label="Brand information">
+              <p>
+                Owner <strong>Rizwan Aslam</strong> — Automation Architect &amp; GoHighLevel Specialist
+              </p>
+              <p>
+                Domain <code>precisionflow.me</code>
+              </p>
+              <p>
+                Email <a href="mailto:rizwan@precisionflow.me">rizwan@precisionflow.me</a>
+              </p>
+            </div>
             <div className="cta-row">
               <a href="#contact" className="cta-primary">
-                Book Automation Audit
+                Start Precision Flow
               </a>
               <a href="#expertise" className="cta-secondary">
-                View Expertise
+                Explore Systems
               </a>
             </div>
             <div className="social-row" role="group" aria-label="Social links">
@@ -279,18 +296,16 @@ function App() {
         <section id="expertise" className="expertise-section">
           <div className="content-grid">
             <article className="info-card">
-              <h2>GoHighLevel Mastery</h2>
+              <h2>Automation Architecture</h2>
               <p>
-                I build production-grade GoHighLevel ecosystems that align funnel design, CRM architecture,
-                and sales execution so teams can scale with speed and consistency.
+                Full operating systems for lead capture, qualification, follow-up, and owner-level visibility.
               </p>
             </article>
 
             <article className="info-card">
-              <h2>Business Automation</h2>
+              <h2>GoHighLevel Specialization</h2>
               <p>
-                From lead capture to closeout, I engineer workflows that reduce leakage, shorten response
-                time, and provide clean visibility across pipeline operations.
+                Pipeline logic, workflows, snapshots, and SaaS mode configured for control and compounding scale.
               </p>
             </article>
           </div>
@@ -301,38 +316,36 @@ function App() {
             </h2>
             <div className="skills-grid">
               <article className="skill-card">
-                <h3>Snapshots</h3>
-                <p>Conversion-ready templates for fast deployment across client accounts.</p>
+                <h3>Sales Pipeline Logic</h3>
+                <p>Stage gates, assignment rules, and trigger discipline across the full journey.</p>
               </article>
               <article className="skill-card">
-                <h3>SaaS Mode</h3>
-                <p>Monetizable white-label setup with packaging, billing logic, and onboarding flow.</p>
+                <h3>Follow-Up Automation</h3>
+                <p>Response windows, retries, and no-lead-left-behind execution systems.</p>
               </article>
               <article className="skill-card">
-                <h3>Advanced Workflows</h3>
-                <p>Multi-step automations for nurturing, reminders, reactivation, and follow-up.</p>
+                <h3>Team Accountability</h3>
+                <p>Clear ownership, clean statuses, and real-time operational feedback loops.</p>
               </article>
               <article className="skill-card">
-                <h3>CRM Pipeline Systems</h3>
-                <p>Structured stages, triggers, and reporting for predictable sales management.</p>
+                <h3>Performance Visibility</h3>
+                <p>Operator-ready dashboards focused on decisions, not vanity reporting.</p>
               </article>
             </div>
           </div>
         </section>
 
         <section className="about-card">
-          <h2>About Me</h2>
+          <h2>Operator Profile</h2>
           <p className="about-copy">
-            I’m Rixwan, a <strong>NUST Mechatronics Engineering</strong> graduate with a management-first
-            mindset and practical execution style.
+            Rizwan Aslam builds backend business systems with a technical-first approach and execution discipline.
           </p>
           <p className="about-copy">
-            I design systems that reduce owner dependency, improve team accountability, and turn operations
-            into predictable outcomes.
+            The objective is simple: remove owner bottlenecks, standardize response quality, and let the business
+            run on process.
           </p>
           <p className="about-copy">
-            My long-term goal is to build a technical school for needy children in my village so practical
-            skills can create real economic freedom.
+            Every workflow is designed to lower operational drag and increase decision speed.
           </p>
         </section>
 
@@ -348,12 +361,11 @@ function App() {
         </section>
 
         <section id="contact" className="final-cta">
-          <h2>Ready to Stop Being the Bottleneck?</h2>
+          <h2>Ready to Build Precision Flow?</h2>
           <p>
-            Let’s map your current process, eliminate friction, and install a system that scales without adding
-            chaos.
+            If you want infrastructure that runs even when you step away, start here.
           </p>
-          <a href="mailto:rixwan44mts@gmail.com" className="cta-primary">
+          <a href="mailto:rizwan@precisionflow.me" className="cta-primary">
             Start the Conversation
           </a>
         </section>
