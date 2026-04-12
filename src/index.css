@@ -367,3 +367,58 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(3, 8, 18, 0.55);
+  border-bottom: 1px solid rgba(126, 177, 232, 0.2);
+}
+
+.site-nav {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+  padding: 0.8rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.nav-link {
+  color: #d6e8fc;
+  border: 1px solid rgba(154, 196, 238, 0.35);
+  background: rgba(16, 31, 54, 0.45);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.nav-link-active {
+  color: #f5fbff;
+  border-color: rgba(146, 207, 255, 0.9);
+  background: rgba(40, 83, 145, 0.62);
+}
+
+.site-footer {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
+  color: #9fb6d1;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.route-card {
+  max-width: 760px;
+  margin: 2rem auto;
+}
+
+.loading-copy {
+  margin: 2rem 0;
+  color: #cfe3f8;
+  font-weight: 600;
+}
