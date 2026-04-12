@@ -194,6 +194,11 @@ function LiquidBackground() {
 }
 
 function App() {
+  const socialLinks = {
+    whatsapp: 'https://wa.me/923000000000',
+    linkedin: 'https://www.linkedin.com/in/rixwan44mts/',
+  }
+
   return (
     <>
       <LiquidBackground />
@@ -214,13 +219,34 @@ function App() {
                 View Expertise
               </a>
             </div>
+            <div className="social-row" aria-label="Social links">
+              <a
+                href={socialLinks.whatsapp}
+                className="social-link"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                WhatsApp
+              </a>
+              <a
+                href={socialLinks.linkedin}
+                className="social-link"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                LinkedIn
+              </a>
+            </div>
           </div>
 
           <div className="hero-image-wrap">
             <img
               className="hero-image"
-              src="/profile-portrait.svg"
-              alt="Professional portrait of Rixwan, automation studio founder"
+              src="/profile.png"
+              alt="Smiling professional portrait of Rixwan"
+              onError={(event) => {
+                event.currentTarget.src = '/profile-portrait.svg'
+              }}
             />
           </div>
         </header>
@@ -271,13 +297,29 @@ function App() {
 
         <section className="about-card">
           <h2>About Me</h2>
-          <p>
+          <p className="about-copy">
             I’m Rixwan, a <strong>NUST Mechatronics Engineering</strong> graduate with a management-first
-            mindset and practical execution style. I focus on building systems that reduce owner dependency,
-            improve team accountability, and turn operations into predictable outcomes. My long-term goal is
-            to build a technical school for needy children in my village so practical skills can create real
-            economic freedom.
+            mindset and practical execution style.
           </p>
+          <p className="about-copy">
+            I design systems that reduce owner dependency, improve team accountability, and turn operations
+            into predictable outcomes.
+          </p>
+          <p className="about-copy">
+            My long-term goal is to build a technical school for needy children in my village so practical
+            skills can create real economic freedom.
+          </p>
+        </section>
+
+        <section className="portrait-section" aria-label="Thinking portrait">
+          <img
+            className="portrait-image"
+            src="/profile-thinking.png"
+            alt="Thinking portrait of Rixwan"
+            onError={(event) => {
+              event.currentTarget.src = '/profile-portrait.svg'
+            }}
+          />
         </section>
 
         <section id="contact" className="final-cta">
