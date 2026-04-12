@@ -27,6 +27,11 @@ body {
   background: radial-gradient(circle at 12% 8%, rgba(70, 130, 255, 0.12), transparent 28%), #03060d;
 }
 
+.navbar-desktop-links,
+.navbar-cta-desktop {
+  display: flex;
+}
+
 a {
   text-decoration: none;
 }
@@ -365,5 +370,16 @@ h1 {
 @media (max-width: 560px) {
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-desktop-links,
+  .navbar-cta-desktop {
+    display: none !important;
+  }
+
+  .navbar-mobile-toggle {
+    display: inline-flex !important;
   }
 }

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Application, DisplacementFilter, Sprite, Texture } from 'pixi.js'
+import Navbar from './components/Navbar'
 import './index.css'
 
 function createGradientTexture(): Texture {
@@ -206,6 +207,7 @@ function App() {
   return (
     <>
       <LiquidBackground />
+      <Navbar />
       <main className="page-shell">
         <header className="hero-section">
           <div className="hero-copy">
