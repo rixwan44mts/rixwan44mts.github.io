@@ -1,0 +1,17 @@
+@keyframes heroTicker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.hero-ticker-track {
+  width: max-content;
+  display: inline-flex;
+  gap: 2.2rem;
+  white-space: nowrap;
+  animation: heroTicker 18s linear infinite;
+  will-change: transform;
+}
