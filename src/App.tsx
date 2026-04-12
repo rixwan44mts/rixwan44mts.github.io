@@ -244,7 +244,7 @@ function App() {
             </article>
           </div>
 
-          <div className="skills-grid" aria-label="GoHighLevel skill cards">
+          <div className="skills-grid" aria-label="GoHighLevel capabilities">
             <article className="skill-card">
               <h3>Snapshots</h3>
               <p>Conversion-ready templates for fast deployment across client accounts.</p>
