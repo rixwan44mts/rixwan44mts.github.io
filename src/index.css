@@ -42,6 +42,11 @@ body {
   }
 }
 
+.navbar-desktop-links,
+.navbar-cta-desktop {
+  display: flex;
+}
+
 a {
   text-decoration: none;
 }
@@ -380,5 +385,16 @@ h1 {
 @media (max-width: 560px) {
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-desktop-links,
+  .navbar-cta-desktop {
+    display: none !important;
+  }
+
+  .navbar-mobile-toggle {
+    display: inline-flex !important;
   }
 }
