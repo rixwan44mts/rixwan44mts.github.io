@@ -25,6 +25,7 @@ export function useLiquidCursor(blobCount = 6) {
     if (!lowResCtx) return
 
     let rafId = 0
+    const startTime = performance.now()
     let width = window.innerWidth
     let height = window.innerHeight
     const scale = 0.22
@@ -144,8 +145,9 @@ export function useLiquidCursor(blobCount = 6) {
       ctx.save()
       ctx.strokeStyle = 'rgba(120, 206, 255, 0.14)'
       ctx.lineWidth = 1
+      const elapsed = performance.now() - startTime
       ctx.beginPath()
-      ctx.arc(pointer.x, pointer.y, 36 + Math.sin(performance.now() * 0.004) * 4, 0, TAU)
+      ctx.arc(pointer.x, pointer.y, 36 + Math.sin(elapsed * 0.004) * 4, 0, TAU)
       ctx.stroke()
       ctx.restore()
     }
