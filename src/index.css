@@ -58,6 +58,19 @@ a {
   margin-bottom: 3.2rem;
 }
 
+.brand-mark {
+  margin-bottom: 0.8rem;
+}
+
+.brand-logo {
+  width: clamp(108px, 10vw, 150px);
+  height: auto;
+  display: block;
+  mix-blend-mode: multiply;
+  filter: saturate(1.2) contrast(1.08) brightness(1.2);
+  opacity: 0.92;
+}
+
 .kicker {
   margin: 0;
   letter-spacing: 0.08em;

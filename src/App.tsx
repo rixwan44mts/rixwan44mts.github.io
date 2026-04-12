@@ -194,6 +194,7 @@ function LiquidBackground() {
 }
 
 function App() {
+  const brandLogoUrl = 'https://github.com/user-attachments/assets/da229b76-a503-4e2f-b361-1cff8d7e6080'
   const socialLinks = {
     whatsapp: 'https://wa.me/923285093973?text=Hi%20Rixwan%2C%20I%20want%20an%20automation%20audit.',
     linkedin: 'https://www.linkedin.com/in/muhammad-rizwan-aslam-43a2b5259',
@@ -206,6 +207,9 @@ function App() {
       <main className="page-shell">
         <header className="hero-section">
           <div className="hero-copy">
+            <div className="brand-mark">
+              <img className="brand-logo" src={brandLogoUrl} alt="RW brand logo" />
+            </div>
             <p className="kicker">Automation Studio for Growth-Focused Operators</p>
             <h1>Your Business Should Run Without You In It.</h1>
             <p className="hero-lead">
