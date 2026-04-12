@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Application, DisplacementFilter, Sprite, Texture } from 'pixi.js'
+import { AboutPage } from './pages/AboutPage'
 import './index.css'
 
 function createGradientTexture(): Texture {
@@ -320,32 +321,7 @@ function App() {
           </div>
         </section>
 
-        <section className="about-card">
-          <h2>About Me</h2>
-          <p className="about-copy">
-            I’m Rixwan, a <strong>NUST Mechatronics Engineering</strong> graduate with a management-first
-            mindset and practical execution style.
-          </p>
-          <p className="about-copy">
-            I design systems that reduce owner dependency, improve team accountability, and turn operations
-            into predictable outcomes.
-          </p>
-          <p className="about-copy">
-            My long-term goal is to build a technical school for needy children in my village so practical
-            skills can create real economic freedom.
-          </p>
-        </section>
-
-        <section className="portrait-section" aria-label="Thinking portrait">
-          <img
-            className="portrait-image"
-            src={bottomProfileImageUrl}
-            alt="Thinking portrait of Rixwan"
-            onError={(event) => {
-              event.currentTarget.src = '/profile-portrait.svg'
-            }}
-          />
-        </section>
+        <AboutPage photoUrl={bottomProfileImageUrl} />
 
         <section id="contact" className="final-cta">
           <h2>Ready to Stop Being the Bottleneck?</h2>
