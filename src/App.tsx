@@ -220,7 +220,7 @@ function App() {
                 View Expertise
               </a>
             </div>
-            <div className="social-row" role="navigation" aria-label="Social links">
+            <div className="social-row" role="group" aria-label="Social links">
               <a
                 href={socialLinks.whatsapp}
                 className="social-link"
