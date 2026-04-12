@@ -262,7 +262,7 @@ function App() {
             Let’s map your current process, eliminate friction, and install a system that scales without adding
             chaos.
           </p>
-          <a href="mailto:hello@automationstudio.com" className="cta-primary">
+          <a href="mailto:rixwan44mts@gmail.com" className="cta-primary">
             Start the Conversation
           </a>
         </section>
