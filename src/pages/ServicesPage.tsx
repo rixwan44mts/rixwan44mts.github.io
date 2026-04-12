@@ -1,5 +1,5 @@
 import type { MouseEvent } from 'react'
-import { animate, motion, useMotionValue } from 'framer-motion'
+import { animate, motion, useMotionValue, useReducedMotion } from 'framer-motion'
 import { Bot, Database, Layers, Mail, TrendingUp, Zap, type LucideIcon } from 'lucide-react'
 
 type Service = {
@@ -44,8 +44,11 @@ const services: Service[] = [
 function ServiceCard({ service }: { service: Service }) {
   const rotateX = useMotionValue(0)
   const rotateY = useMotionValue(0)
+  const reduceMotion = useReducedMotion()
 
   const onMouseMove = (event: MouseEvent<HTMLElement>) => {
+    if (reduceMotion) return
+
     const rect = event.currentTarget.getBoundingClientRect()
     const x = (event.clientX - (rect.left + rect.width / 2)) / (rect.width / 2)
     const y = (event.clientY - (rect.top + rect.height / 2)) / (rect.height / 2)
@@ -56,6 +59,8 @@ function ServiceCard({ service }: { service: Service }) {
   }
 
   const onMouseLeave = () => {
+    if (reduceMotion) return
+
     animate(rotateX, 0, { duration: 0.4, ease: 'easeOut' })
     animate(rotateY, 0, { duration: 0.4, ease: 'easeOut' })
   }
@@ -65,8 +70,8 @@ function ServiceCard({ service }: { service: Service }) {
   return (
     <motion.article
       className="service-card"
-      style={{ rotateX, rotateY, transformPerspective: 600 }}
-      whileHover={{ y: -4 }}
+      style={reduceMotion ? undefined : { rotateX, rotateY, transformPerspective: 600 }}
+      whileHover={reduceMotion ? undefined : { y: -4 }}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
