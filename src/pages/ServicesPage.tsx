@@ -49,10 +49,10 @@ function ServiceCard({ service }: { service: Service }) {
     const rect = event.currentTarget.getBoundingClientRect()
     const x = (event.clientX - (rect.left + rect.width / 2)) / (rect.width / 2)
     const y = (event.clientY - (rect.top + rect.height / 2)) / (rect.height / 2)
-    const tiltLimit = 6
+    const TILT_LIMIT = 6
 
-    rotateX.set(-y * tiltLimit)
-    rotateY.set(x * tiltLimit)
+    rotateX.set(-y * TILT_LIMIT)
+    rotateY.set(x * TILT_LIMIT)
   }
 
   const onMouseLeave = () => {
