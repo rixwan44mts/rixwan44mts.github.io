@@ -194,6 +194,12 @@ function LiquidBackground() {
 }
 
 function App() {
+  const socialLinks = {
+    whatsapp: 'https://wa.me/923285093973?text=Hi%20Rixwan%2C%20I%20want%20an%20automation%20audit.',
+    linkedin: 'https://www.linkedin.com/in/muhammad-rizwan-aslam-43a2b5259',
+    fiverr: 'https://www.fiverr.com/s/38rlVkV',
+  }
+
   return (
     <>
       <LiquidBackground />
@@ -214,13 +220,50 @@ function App() {
                 View Expertise
               </a>
             </div>
+            <div className="social-row" role="group" aria-label="Social links">
+              <a
+                href={socialLinks.whatsapp}
+                className="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatsApp
+              </a>
+              <a
+                href={socialLinks.linkedin}
+                className="social-link social-link-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open LinkedIn profile in a new tab"
+                title="LinkedIn"
+              >
+                <span className="social-icon social-icon-linkedin" aria-hidden="true">
+                  in
+                </span>
+              </a>
+              <a
+                href={socialLinks.fiverr}
+                className="social-link social-link-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Fiverr profile in a new tab"
+                title="Fiverr"
+              >
+                <span className="social-icon social-icon-fiverr" aria-hidden="true">
+                  fi
+                </span>
+              </a>
+            </div>
           </div>
 
           <div className="hero-image-wrap">
             <img
               className="hero-image"
-              src="/profile-portrait.svg"
-              alt="Professional portrait of Rixwan, automation studio founder"
+              src="/profile.png"
+              alt="Smiling professional portrait of Rixwan"
+              onError={(event) => {
+                event.currentTarget.src = '/profile-portrait.svg'
+              }}
             />
           </div>
         </header>
@@ -271,13 +314,29 @@ function App() {
 
         <section className="about-card">
           <h2>About Me</h2>
-          <p>
+          <p className="about-copy">
             I’m Rixwan, a <strong>NUST Mechatronics Engineering</strong> graduate with a management-first
-            mindset and practical execution style. I focus on building systems that reduce owner dependency,
-            improve team accountability, and turn operations into predictable outcomes. My long-term goal is
-            to build a technical school for needy children in my village so practical skills can create real
-            economic freedom.
+            mindset and practical execution style.
           </p>
+          <p className="about-copy">
+            I design systems that reduce owner dependency, improve team accountability, and turn operations
+            into predictable outcomes.
+          </p>
+          <p className="about-copy">
+            My long-term goal is to build a technical school for needy children in my village so practical
+            skills can create real economic freedom.
+          </p>
+        </section>
+
+        <section className="portrait-section" aria-label="Thinking portrait">
+          <img
+            className="portrait-image"
+            src="/profile-thinking.png"
+            alt="Thinking portrait of Rixwan"
+            onError={(event) => {
+              event.currentTarget.src = '/profile-portrait.svg'
+            }}
+          />
         </section>
 
         <section id="contact" className="final-cta">
