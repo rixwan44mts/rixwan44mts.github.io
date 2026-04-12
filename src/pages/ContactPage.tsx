@@ -58,7 +58,7 @@ function ContactPage() {
     )
 
     window.open(`mailto:rixwan44mts@gmail.com?subject=${subject}&body=${body}`, '_self')
-    console.log('Contact form submitted:', values)
+    console.log('Contact email draft prepared:', values)
     toast.success('Thanks! Your email draft is ready to send.')
     reset()
   }
