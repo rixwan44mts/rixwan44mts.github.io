@@ -244,24 +244,29 @@ function App() {
             </article>
           </div>
 
-          <div className="skills-grid" aria-label="GoHighLevel capabilities">
-            <article className="skill-card">
-              <h3>Snapshots</h3>
-              <p>Conversion-ready templates for fast deployment across client accounts.</p>
-            </article>
-            <article className="skill-card">
-              <h3>SaaS Mode</h3>
-              <p>Monetizable white-label setup with packaging, billing logic, and onboarding flow.</p>
-            </article>
-            <article className="skill-card">
-              <h3>Advanced Workflows</h3>
-              <p>Multi-step automations for nurturing, reminders, reactivation, and follow-up.</p>
-            </article>
-            <article className="skill-card">
-              <h3>CRM Pipeline Systems</h3>
-              <p>Structured stages, triggers, and reporting for predictable sales management.</p>
-            </article>
-          </div>
+          <section className="skills-section" aria-labelledby="gohighlevel-capabilities-heading">
+            <h2 id="gohighlevel-capabilities-heading" className="skills-heading">
+              GoHighLevel Capabilities
+            </h2>
+            <div className="skills-grid">
+              <article className="skill-card">
+                <h3>Snapshots</h3>
+                <p>Conversion-ready templates for fast deployment across client accounts.</p>
+              </article>
+              <article className="skill-card">
+                <h3>SaaS Mode</h3>
+                <p>Monetizable white-label setup with packaging, billing logic, and onboarding flow.</p>
+              </article>
+              <article className="skill-card">
+                <h3>Advanced Workflows</h3>
+                <p>Multi-step automations for nurturing, reminders, reactivation, and follow-up.</p>
+              </article>
+              <article className="skill-card">
+                <h3>CRM Pipeline Systems</h3>
+                <p>Structured stages, triggers, and reporting for predictable sales management.</p>
+              </article>
+            </div>
+          </section>
         </section>
 
         <section className="about-card">
