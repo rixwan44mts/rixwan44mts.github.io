@@ -238,6 +238,7 @@ h1 {
   .hero-image-wrap {
     justify-self: center;
     width: min(350px, 85vw);
+    order: -1;
   }
 
   h1 {

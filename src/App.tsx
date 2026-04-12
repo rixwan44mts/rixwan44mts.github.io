@@ -244,7 +244,7 @@ function App() {
             </article>
           </div>
 
-          <section className="skills-section" aria-labelledby="gohighlevel-capabilities-heading">
+          <div className="skills-section" role="region" aria-labelledby="gohighlevel-capabilities-heading">
             <h2 id="gohighlevel-capabilities-heading" className="skills-heading">
               GoHighLevel Capabilities
             </h2>
@@ -266,7 +266,7 @@ function App() {
                 <p>Structured stages, triggers, and reporting for predictable sales management.</p>
               </article>
             </div>
-          </section>
+          </div>
         </section>
 
         <section className="about-card">
