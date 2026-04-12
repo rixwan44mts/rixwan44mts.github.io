@@ -1,0 +1,24 @@
+<svg width="680" height="820" viewBox="0 0 680 820" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="680" height="820" rx="30" fill="url(#bg)"/>
+  <circle cx="340" cy="258" r="132" fill="url(#skin)"/>
+  <path d="M193 637c8-126 82-215 147-215s139 89 147 215" fill="url(#shirt)"/>
+  <path d="M228 234c15-95 82-146 118-146 36 0 103 51 118 146-33-37-73-57-118-57-45 0-85 20-118 57z" fill="#091936"/>
+  <ellipse cx="340" cy="793" rx="184" ry="22" fill="#040A16" fill-opacity=".75"/>
+  <g opacity=".36">
+    <path d="M95 118h490M95 188h490M95 258h490M95 328h490M95 398h490M95 468h490M95 538h490M95 608h490M95 678h490" stroke="#56B5FF" stroke-opacity=".2" stroke-width="1.2"/>
+  </g>
+  <defs>
+    <linearGradient id="bg" x1="48" y1="42" x2="629" y2="773" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1A36"/>
+      <stop offset="1" stop-color="#081021"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="268" y1="139" x2="404" y2="362" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD2AE"/>
+      <stop offset="1" stop-color="#EAA376"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="193" y1="422" x2="487" y2="637" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2A78D8"/>
+      <stop offset="1" stop-color="#194F9A"/>
+    </linearGradient>
+  </defs>
+</svg>
