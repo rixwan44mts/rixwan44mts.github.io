@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Application, DisplacementFilter, Sprite, Texture } from 'pixi.js'
+import ServicesPage from './pages/ServicesPage'
 import './index.css'
 
 function createGradientTexture(): Texture {
@@ -275,6 +276,8 @@ function App() {
             />
           </div>
         </header>
+
+        <ServicesPage />
 
         <section id="expertise" className="expertise-section">
           <div className="content-grid">
