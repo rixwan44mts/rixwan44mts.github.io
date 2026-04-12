@@ -195,7 +195,7 @@ function LiquidBackground() {
 
 function App() {
   const socialLinks = {
-    whatsapp: 'https://wa.me/?text=Hi%20Rixwan%2C%20I%20want%20an%20automation%20audit.',
+    whatsapp: 'https://wa.me/923285093973?text=Hi%20Rixwan%2C%20I%20want%20an%20automation%20audit.',
     linkedin: 'https://www.linkedin.com/in/rixwan44mts/',
   }
 
