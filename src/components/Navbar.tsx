@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu } from 'lucide-react'
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const navItems = [
   { label: 'Services', to: '/services' },
@@ -13,7 +13,6 @@ const navItems = [
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const location = useLocation()
 
   useEffect(() => {
     const onScroll = () => {
@@ -24,10 +23,6 @@ function Navbar() {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
-
-  useEffect(() => {
-    setMobileOpen(false)
-  }, [location.pathname])
 
   const shellClassName = useMemo(() => {
     return [
@@ -165,6 +160,7 @@ function Navbar() {
                 >
                   <NavLink
                     to={to}
+                    onClick={() => setMobileOpen(false)}
                     style={({ isActive }) => ({
                       color: isActive ? '#d4ff6b' : '#ededed',
                       textDecoration: 'none',
@@ -183,6 +179,7 @@ function Navbar() {
               >
                 <NavLink
                   to="/contact"
+                  onClick={() => setMobileOpen(false)}
                   style={{
                     borderRadius: '999px',
                     backgroundColor: '#d4ff6b',
