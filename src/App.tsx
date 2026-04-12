@@ -194,7 +194,9 @@ function LiquidBackground() {
 }
 
 function App() {
-  const brandLogoUrl = 'https://github.com/user-attachments/assets/da229b76-a503-4e2f-b361-1cff8d7e6080'
+  const brandLogoUrl = 'https://github.com/user-attachments/assets/801f6f28-6426-4526-892d-08f60b3639d9'
+  const topProfileImageUrl = 'https://github.com/user-attachments/assets/c97b9d2f-2567-44a3-a07a-5094a3ea6eaf'
+  const bottomProfileImageUrl = 'https://github.com/user-attachments/assets/87fcaced-f262-402f-acf5-6c51c339caac'
   const socialLinks = {
     whatsapp: 'https://wa.me/923285093973?text=Hi%20Rixwan%2C%20I%20want%20an%20automation%20audit.',
     linkedin: 'https://www.linkedin.com/in/muhammad-rizwan-aslam-43a2b5259',
@@ -263,8 +265,10 @@ function App() {
           <div className="hero-image-wrap">
             <img
               className="hero-image"
-              src="/profile.png"
+              src={topProfileImageUrl}
               alt="Smiling professional portrait of Rixwan"
+              width={350}
+              height={250}
               onError={(event) => {
                 event.currentTarget.src = '/profile-portrait.svg'
               }}
@@ -335,7 +339,7 @@ function App() {
         <section className="portrait-section" aria-label="Thinking portrait">
           <img
             className="portrait-image"
-            src="/profile-thinking.png"
+            src={bottomProfileImageUrl}
             alt="Thinking portrait of Rixwan"
             onError={(event) => {
               event.currentTarget.src = '/profile-portrait.svg'
