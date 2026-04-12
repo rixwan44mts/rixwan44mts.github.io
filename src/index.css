@@ -36,11 +36,6 @@ a {
   inset: 0;
   z-index: -1;
   overflow: hidden;
-}
-
-.liquid-background canvas {
-  width: 100% !important;
-  height: 100% !important;
   display: block;
 }
 
@@ -196,15 +191,15 @@ h1 {
 
 .hero-image-wrap {
   justify-self: end;
-  width: 350px;
+  width: 343px;
   max-width: 100%;
 }
 
 .hero-image {
-  width: 350px;
-  height: 250px;
+  width: 343px;
+  height: auto;
   max-width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   background: rgba(8, 18, 34, 0.7);
   border-radius: 24px;
   border: 1px solid rgba(166, 211, 255, 0.46);
@@ -353,7 +348,7 @@ h1 {
 
   .hero-image-wrap {
     justify-self: center;
-    width: 350px;
+    width: 343px;
     max-width: 85vw;
   }
 
